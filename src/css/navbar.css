@@ -1,0 +1,56 @@
+/* Navigation bar style */
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46%;
+}
+.header-logo{
+    width: 8%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-a{
+    height: 60%;
+}
+.logo{
+    height: -webkit-fill-available;
+}
+.header-prof{
+    display: flex;
+    align-items: center;
+    width: 46%;
+}
+.nav-table{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    text-transform: uppercase;
+}
+.nav-li{
+    list-style-type: none;
+    padding: 0 20px;
+}
+.nav-li-a {
+    display: inline-block;
+    position: relative; /* Needed for the pseudo-element positioning */
+}
+
+.nav-li-a::before {
+    content: ''; /* This is needed to create the pseudo-element */
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: #fff; /* Use background-color instead of color */
+    transition: width ease 0.4s; /* Specify which property to transition */
+    position: absolute;
+    top: 28px;
+    left: 0;
+}
+
+.nav-li-a:hover::before {
+    width: 100%;
+}

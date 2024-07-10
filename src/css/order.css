@@ -1,0 +1,49 @@
+/* order page */
+.colums-cont{
+    width: 95%;
+    margin-top: 30px;
+    background-color: #fff;
+    color: #000000;
+}
+.colums-div{
+    position: relative;
+    padding: 30px 0 30px 30px;
+}
+.colums-div h1{
+    margin-left: 30px;
+}
+.colums-row{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.row-div{
+    min-width: 350px;
+    height: 360px;
+    margin: 30px;
+    border: #dddddd 1px solid;
+    box-shadow: #999999 0 0 5px;
+    text-align: center;
+    transition: all ease-in-out .4s;
+    cursor: pointer;
+}
+.row-div:hover{
+    box-shadow: #999999 0 0 15px;
+}
+.row-img{
+    height: 80%;
+}
+.row-img img{
+    height: -webkit-fill-available;
+}
+.row-div span{
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.row-div span:hover{
+    text-decoration: underline;
+}
+.row-div:hover > .order-snap{
+    margin-top: 10px;
+}

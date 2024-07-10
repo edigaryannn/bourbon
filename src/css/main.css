@@ -1,11 +1,37 @@
-*,::before,::after{
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
 }
-a, a:link, a:visited{
+/* Define the keyframes for the animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Define the animation for the element */
+.animate-text {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate-text.visible {
+    animation: fadeIn 1s forwards;
+}
+a,
+a:link,
+a:visited {
     text-decoration: none;
     color: #ffffff;
 }
+
 /* General Styles */
 
 body {
@@ -25,93 +51,57 @@ header {
     display: flex;
     justify-content: center;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: center;
     width: 80%;
-}
-.header-nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 46%;
-}
-.header-logo{
-    width: 8%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo-a{
-    height: 60%;
-}
-.logo{
-    height: -webkit-fill-available;
-}
-.header-prof{
-    display: flex;
-    align-items: center;
-    width: 46%;
-}
-.nav-table{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    text-transform: uppercase;
-}
-.nav-li{
-    list-style-type: none;
-    padding: 0 20px;
-}
-.nav-li-a {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-    display: inline-block;
-    position: relative; /* Needed for the pseudo-element positioning */
-}
-
-.nav-li-a::before {
-    content: ''; /* This is needed to create the pseudo-element */
-    display: inline-block;
-    width: 0;
-    height: 2px;
-    background-color: #fff; /* Use background-color instead of color */
-    transition: width ease 0.4s; /* Specify which property to transition */
-    position: absolute;
-    top: 28px;
-    left: 0;
-}
-
-.nav-li-a:hover::before {
-    width: 100%;
+    z-index: 2;
 }
 
 /* Main Content */
 main {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(https://www.winedeals.com/media/magefan_blog/shutterstock_1364396918.jpg);
+    background-size: cover;
     background-color: #101010;
     color: #D3D3D3;
+    display: flex;
 }
-.main-heading{
+
+main::before {
+    content: ' ';
+    height: -webkit-fill-available;
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: inset black 10px 20px 70px;
+}
+
+.main-heading {
     margin-top: 50px;
 }
-.main-heading h1{
+
+.main-heading h1 {
     font-size: 48px;
 }
-.main-cont{
+
+.main-cont {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
 }
-.main-div{
+
+.main-div {
     display: inline-block;
     width: 85%;
     height: 40rem;
-    margin: 40px 0;
+    margin: 42px 0;
     position: relative;
     overflow: hidden;
     background-repeat: no-repeat;
@@ -122,6 +112,7 @@ main {
     cursor: pointer;
     /* background-image: url(https://www.hennessy.com/sites/hennessy/files/styles/landscape_2880x1540/public/2022-03/exclusivites_1_vf_landscape.jpg?itok=LfTZ5Fuf) */
 }
+
 .main-div::before {
     display: inline-block;
     content: '';
@@ -141,10 +132,12 @@ main {
     opacity: 0.4;
     transition: ease-in-out .4s;
 }
-.main-div:hover > .main-div-text{
+
+.main-div:hover>.main-div-text {
     margin: 0 0 50px 50px;
 }
-.main-div-but{
+
+.main-div-but {
     background: transparent;
     border: white 3px solid;
     width: 16rem;
@@ -162,18 +155,21 @@ main {
     color: #fff;
     z-index: 3;
 }
-.main-div-but:hover{
+
+.main-div-but:hover {
     background-color: #fff;
     color: #000;
 
 }
-.main-div-img{
+
+.main-div-img {
     position: absolute;
     bottom: -30px;
     left: -50px;
     transform: rotate(45deg) scale(1.5);
 }
-.main-div-text{
+
+.main-div-text {
     width: 30%;
     position: absolute;
     bottom: 0;
@@ -183,25 +179,200 @@ main {
     transition: ease-in-out .4s;
 }
 
-.main-div-text p{
+.main-div-text p {
     font-size: 18px;
     text-shadow: #000 10px 0px 10px;
-}   
-.main-div-text h1{
+}
+
+.main-div-text h1 {
     font-size: 36px;
     margin-bottom: 10px;
 }
+
+.nonalc-cont {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nonalc-div {
+    width: 20%;
+    height: 48rem;
+    background-color: #fff;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nonalc-img {
+    width: 100%;
+    padding-top: 50px;
+    min-height: 570px;
+    text-align: center;
+}
+
+.nonalc-div img {
+    height: 570px;
+}
+
+.nonalc-div h2 {
+    color: #101010;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.nonalc-div a:hover {
+    text-decoration: underline;
+    color: #000;
+
+}
+
+.nonalc-div a {
+    margin-top: 20px;
+}
+
+.nonalc-div span {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: Roboto;
+}
+
+
+/* contacts */
+
+.contacts-div {
+    width: 70%;
+    background-color: #fff;
+    margin: 50px 0 50px 0;
+    padding: 100px 0;
+    text-align: center;
+    color: #000;
+}
+
+.contacts-div h2 {
+    margin-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 720px;
+    height: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    border: #000 1px solid;
+}
+
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible {
+    outline: none;
+}
+
+.form-select {
+    border-radius: 0;
+}
+
+.form-select option {
+    height: 50px;
+}
+
+.form-select:focus {
+    box-shadow: none;
+    border: #000 1px solid;
+}
+
+.form textarea {
+    height: 100px;
+}
+
+.form-btn {
+    margin: 20px 0;
+    height: 50px;
+    width: 150px;
+    background: none;
+    border: #000 1px solid;
+    color: #000;
+    transition: all ease 0.4s;
+}
+
+.form-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.contacts-div span {
+    color: #333333;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* brand page */
+.brand-div {
+    height: 48rem;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: #000 0 0 50px;
+    background-color: #000;
+}
+.brand-div::before{
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(https://www.hennessy.com/sites/hennessy/files/styles/landscape_2880x1540/public/2022-03/charente_1_vf_landscape_bg.jpg?itok=S6ML_AqY);
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.brand-text {
+    width: 500px;
+    z-index: 2;
+    color: #F5F5F5;
+}
+
+.brand-h1 {
+
+}
+
+.brand-desc {
+
+}
+
+
 /* Footer */
 footer {
+    display: grid;
+}
+
+.footer-cont {
     background-color: #333333;
     color: #F5F5F5;
     text-align: center;
+    z-index: 2;
 }
-.footer-logo{
+
+.footer-logo {
     padding: 30px 0;
     position: relative;
 }
-.footer-logo::after{
+
+.footer-logo::after {
     content: '';
     width: 100%;
     height: 2px;
@@ -210,13 +381,17 @@ footer {
     bottom: 0;
     left: 0;
 }
-.footer-logo-a{
+
+.footer-logo-a {
     height: 100%;
 }
-.footer-logo-img{
+
+.footer-logo-img {
     height: 4rem;
 }
-footer h1{
+
+footer h1 {
     padding: 20px 0;
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: 300;
 }
