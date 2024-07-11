@@ -316,44 +316,6 @@ main::before {
     margin-top: 20px;
 }
 
-/* brand page */
-.brand-div {
-    height: 48rem;
-    width: 90%;
-    background-color: rgb(255, 255, 255);
-    margin: 20px 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    box-shadow: #000 0 0 50px;
-    background-color: #000;
-}
-.brand-div::before{
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: url(https://www.hennessy.com/sites/hennessy/files/styles/landscape_2880x1540/public/2022-03/charente_1_vf_landscape_bg.jpg?itok=S6ML_AqY);
-    background-size: cover;
-    opacity: 0.9;
-}
-
-.brand-text {
-    width: 500px;
-    z-index: 2;
-    color: #F5F5F5;
-}
-
-.brand-h1 {
-
-}
-
-.brand-desc {
-
-}
-
 
 /* Footer */
 footer {

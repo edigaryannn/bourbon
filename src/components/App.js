@@ -9,9 +9,10 @@ import Brands from '../pages/Brands'
 import { useState } from 'react';
 import { properties } from './Context';
 
-import '../css/main.css'
-import '../css/navbar.css'
-import '../css/order.css'
+import '../css/main.css';
+import '../css/navbar.css';
+import '../css/order.css';
+import '../css/brandsCss.css';
 
 function App() {
 

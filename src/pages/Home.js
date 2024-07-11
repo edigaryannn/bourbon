@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import brandArr from '../data/HomeData';
+import AnimatedText from "../components/AnimatedText";
+import useScrollToTop from "../components/ScrollToTop";
 
 const groupByBrand = (brands) => {
     return brands.reduce((acc, item) => {
@@ -13,6 +15,9 @@ const groupByBrand = (brands) => {
 }
 
 export default function Home() {
+
+    useScrollToTop();
+
     const [brands, setBrands] = useState([]);
 
     useEffect(() => {
@@ -42,14 +47,14 @@ export default function Home() {
                                 </button>
                             </Link>
                             <div className="main-div-text">
-                                <h1>{item.brand}</h1>
-                                <p>{item.description}</p>
+                                <h1><AnimatedText text={item.brand} /></h1>
+                                <p><AnimatedText text={item.description} /></p>
                             </div>
                         </div>
                     ))
                 ))}
 
-                <div className="main-heading">
+                {/* <div className="main-heading">
                     <h1>Other Drinks.</h1>
                 </div>
                 <div className="nonalc-cont">
@@ -73,7 +78,7 @@ export default function Home() {
                         <h2>Pepsi Max</h2>
                         <a href="/"><span>More</span></a>
                     </div>
-                </div>
+                </div> */}
             </div>
         </main>
     );
