@@ -14,7 +14,25 @@ const groupByBrand = (brands) => {
     }, {});
 }
 
+
 export default function Home() {
+
+    // smooth scrolling effect function
+// const [scrollPosition, setScrollPosition] = useState(0);
+// const [scrollPositionY, setScrollPositionY] = useState(0);
+
+// useEffect(() => {
+    
+    
+//     const onScroll = () => {
+//         setScrollPosition(scrollSize);
+//     };
+
+//     window.addEventListener('scroll', onScroll);
+//     let scrollSize = window.scrollY - 50;
+// }, []);
+
+// console.log(window.scrollY);
 
     useScrollToTop();
 

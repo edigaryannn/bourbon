@@ -24,7 +24,7 @@ useEffect(() => {
                     <h1>Contacts</h1>
                 </div>
                 <div className="contacts-div">
-                    <h2>If you have question for us, you can send it here.</h2>
+                    <h2>If you have question or suggestion for us, you can send it here.</h2>
                     <form className="form">
                         <input className="form-input" type="text" placeholder="First-name" required />
                         <input type="text" placeholder="Surname" required />

@@ -12,7 +12,7 @@ import { properties } from './Context';
 import '../css/main.css';
 import '../css/navbar.css';
 import '../css/order.css';
-import '../css/brandsCss.css';
+import '../css/brands.css';
 
 function App() {
 

@@ -1,4 +1,12 @@
 /* brand page */
+.c-SmoothScroll {
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 .brand-div,.brand-div-2, .brand-div-3{
     height: 48rem;
     width: 95%;
@@ -25,6 +33,7 @@
     z-index: 2;
     color: #F5F5F5;
     position: relative;
+    text-shadow: #000 0 0 15px;
 
 }
 .brand-cont{
