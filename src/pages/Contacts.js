@@ -1,6 +1,7 @@
 import React from "react";
 import brandArr from "../data/HomeData";
 import { useState, useEffect } from "react";
+import useScrollToTop from "../components/ScrollToTop";
 
 
 export default function Contacts() {
@@ -15,6 +16,9 @@ useEffect(() => {
 
     fetchBrands();
 }, []);
+
+//scrolltotop function automaticaly scrolls to top of every component 
+useScrollToTop();
 
 
     return (

@@ -59,7 +59,7 @@ export default function Home() {
                             className="main-div" 
                             style={{ backgroundImage: `url(${item.backUrl})` }}
                         >
-                            <Link to={`/brands/${item.brand}`}>
+                            <Link to={`/brands/${item.id}`}>
                                 <button className="main-div-but">
                                     Watch Brand
                                 </button>
