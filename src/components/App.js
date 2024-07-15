@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import Contacts from '../pages/Contacts';
 import Order from '../pages/Order';
 import Brands from '../pages/Brands'
+import Profile from '../pages/Profile';
 import { useState } from 'react';
 import { properties } from './Context';
 
@@ -13,6 +14,7 @@ import '../css/main.css';
 import '../css/navbar.css';
 import '../css/order.css';
 import '../css/brands.css';
+import '../css/profile.css';
 
 function App() {
 
@@ -31,7 +33,8 @@ function App() {
                     <Route index path='/' element={<Home />}></Route>
                     <Route path='/Contacts' element={<Contacts />}></Route>
                     <Route path='/Order' element={<Order />}></Route>
-                    <Route path='/Brands/:brand' element={<Brands />}></Route>
+                    <Route path='/Brands/:id' element={<Brands />}></Route>
+                    <Route path='/Profile' element={<Profile />}></Route>
 
                 </Routes>
                 <Footer /> 

@@ -25,7 +25,9 @@ class Header extends React.Component {
                     </div>
 
                     <div className="header-prof">
-                        <CgProfile className="nav-logo" />
+                        <Link to={'/profile'}>
+                            <CgProfile className="nav-logo" />
+                        </Link>
                     </div>
 
                 </div>

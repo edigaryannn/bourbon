@@ -1,33 +1,47 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import brandArr from '../data/HomeData'; // Adjust the import path as needed
+import brandArr from '../data/HomeData';
+import brandsData from '../data/BrandsData';
 import AnimatedText from "../components/AnimatedText";
 import useScrollToTop from "../components/ScrollToTop";
 
 export default function Brands() {
     const { id } = useParams();
-    const [brand, setBrand] = useState(null);
+    const [brand, setBrand] = useState(null); //depends to brandArr
+    const [brandData, setBrandData] = useState(null); // depends to brandsData
     const [scrollPosition, setScrollPosition] = useState(0);
+    console.log(scrollPosition);
 
     useEffect(() => {
         const fetchBrand = async () => {
             try {
                 const data = await brandArr(); // Invoke the async function to get data
-                console.log("Fetched data:", data);
-                const selectedBrand = data.find(brand => brand.id === parseInt(id));
-                console.log("Selected brand:", selectedBrand);
+                const selectedBrand = data.find(brands => brands.id === parseInt(id));
                 setBrand(selectedBrand);
             } catch (error) {
                 console.error("Error fetching brand data:", error);
                 // Handle error state if needed
             }
         };
-    
-        console.log("ID parameter:", id);
         fetchBrand();
     }, [id]);
-    
 
+    useEffect(() => {
+        const fetchBrandData = async () => {
+            try {
+                const data = await brandsData(); // Invoke the async function to get data
+                
+                const selectedBrandData = data.find(brandData => brandData.id === parseInt(id));
+                setBrandData(selectedBrandData);
+                console.log(selectedBrandData);
+            } catch (error) {
+                console.error("Error fetching brand data:", error);
+                // Handle error state if needed
+            }
+        };
+        fetchBrandData();
+    }, [id]);
+    
     useEffect(() => {
         // Function to handle scroll position
         const scrollChanging = () => {
@@ -48,36 +62,74 @@ export default function Brands() {
 
     return (
         <main>
-            <div className="main-cont">
-                <div className="main-heading">
-                    <h1>{brand.brand}</h1>
-                </div>
+        <div className="main-cont">
+            <div className="main-heading">
+                <h1>{brandData.brand}</h1>
+            </div>
 
-                {/* Brand section */}
-                <div className="brand-div div-element">
-                    <div className="brand-text">
-                        <h1 className="brand-h1"><AnimatedText text={brand.brand} /></h1>
-                        <article className="brand-desc"><AnimatedText text={brand.description} /> </article>
-                    </div>
-                    <div className="brand-image">
-                        <img src={brand.backUrl} alt={brand.brand} />
-                    </div>
+            {/* First brand section */}
+            <div className="brand-div smooth-scroll-element">
+                <div className="brand-text">
+                    <h1 className="brand-h1"><AnimatedText text={brandData.title1} /></h1>
+                    <article className="brand-desc"><AnimatedText text={brandData.desc1} /> </article>
                 </div>
+            </div>
 
-                {/* Additional sections as needed */}
-                {/* Example:
-                <div className="brand-cont smooth-scroll-element">
-                    ...
+            {/* Second brand section */}
+            <div className="brand-cont smooth-scroll-element">
+                <div className="brand-div-2">
+                    <style>
+                        {`
+                        .brand-div-2::before {
+                            background-image: url(${brandData.image1});
+                        }
+                        `}
+                    </style>
                 </div>
-                */}
+                <div className="brand-text-2">
+                    <h1 className="brand-h1"><AnimatedText text={brandData.title2} /></h1>
+                    <article className="brand-desc"><AnimatedText text={brandData.desc2} /> </article>
+                </div>
+            </div>
 
-                {/* Link to order page */}
+            {/* Third brand section */}
+            <div className="brand-div-3 smooth-scroll-element">
+                <style>
+                    {`
+                    .brand-div-3::before {
+                        background-image: url(${brandData.image2});
+                    }
+                    `}
+                </style>
+                <div className="brand-text-3">
+                    <h1 className="brand-h1"><AnimatedText text={brandData.title3} /></h1>
+                    <article className="brand-desc"><AnimatedText text={brandData.desc3} /> </article>
+                </div>
                 <Link to={`/order`}>
                     <button className="main-div-but">
                         Watch Product
                     </button>
                 </Link>
             </div>
-        </main>
+        </div>
+
+
+        <style>
+            {`
+                .brand-div::before {
+                                background-image: url(${brandData.image1});
+                            }
+            
+                .brand-div-2::before {
+                                background-image: url(${brandData.image2});
+                            }
+                                
+                .brand-div-3::before {
+                                background-image: url(${brandData.image3});
+                            }
+            `}
+        </style>
+
+    </main>
     );
 }
