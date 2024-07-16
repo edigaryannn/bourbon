@@ -1,6 +1,6 @@
 /* order page */
 .colums-cont{
-    width: 95%;
+    width: 100%;
     margin-top: 30px;
     background-color: #fff;
     color: #000000;
@@ -10,7 +10,8 @@
     padding: 30px 0 30px 0;
 }
 .colums-div h1{
-    margin-left: 30px;
+    margin: 20px 50px;
+    text-transform: capitalize;
 }
 .colums-row{
     display: flex;
@@ -38,7 +39,6 @@
     box-shadow: 0 0 0 #dddddd;
 }
 .row-div:hover{
-
    box-shadow:  0 0 10px #dddddd ;
 }
 .row-img{
@@ -54,4 +54,7 @@
 }
 .row-div span:hover{
     text-decoration: underline;
+}
+.row-div a{
+    color: #000000;
 }

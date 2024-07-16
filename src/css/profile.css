@@ -2,7 +2,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 20px 0;
     
 }
 .profile-main .main-heading{
@@ -10,7 +9,7 @@
     text-align: center;
 }
 .profile-div{
-    width: 97%;
+    width: 100%;
     padding: 100px;
     background-color: #fff;
     display: flex;
@@ -36,6 +35,15 @@
     font-size: 14px;
     text-transform: uppercase;
     cursor: pointer;
+    transition: all ease-in-out .4s;
+}
+.profile-text .active{
+    color: #000;
+    text-decoration: underline;
+}
+.profile-text span:hover{
+    transition: all ease .4s;
+    color: #000;
 }
 .profile-form{
     min-height: 800px;
@@ -51,6 +59,10 @@
     height: 1px;
     background-color: #333;
 }
-.profile-form form input{
+.profile-form form input,.profile-form form textarea{
     width: 100%;
+}
+.profile-heading h1{
+    margin: 0 0 100px 0;
+    color: #333;
 }

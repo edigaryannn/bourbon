@@ -7,14 +7,18 @@ import Contacts from '../pages/Contacts';
 import Order from '../pages/Order';
 import Brands from '../pages/Brands'
 import Profile from '../pages/Profile';
+import Single from '../pages/Single';
 import { useState } from 'react';
 import { properties } from './Context';
+import useScrollToTop from './ScrollToTop';
 
 import '../css/main.css';
 import '../css/navbar.css';
 import '../css/order.css';
 import '../css/brands.css';
 import '../css/profile.css';
+import '../css/single.css';
+
 
 function App() {
 
@@ -24,6 +28,9 @@ function App() {
         loader, setLoader,
       }
 
+
+        useScrollToTop()
+  
         return(
             <><properties.Provider value={elements}>
             <Header />
@@ -35,6 +42,7 @@ function App() {
                     <Route path='/Order' element={<Order />}></Route>
                     <Route path='/Brands/:id' element={<Brands />}></Route>
                     <Route path='/Profile' element={<Profile />}></Route>
+                    <Route path='/Single/:id' element={<Single />}></Route>
 
                 </Routes>
                 <Footer /> 

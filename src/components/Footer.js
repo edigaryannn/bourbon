@@ -25,7 +25,7 @@ export default function Footer() {
                 <div className="footer-div">
                     <ul className="footer-brands">
                         {brands.map((item, index) => (
-                            <Link to={`brands/${item.brand}`} key={index} ><li className="footer-brand">{item.brand}</li></Link>
+                            <Link to={`brands/${item.id}`} key={index} ><li className="footer-brand">{item.brand}</li></Link>
                         ))}
                     </ul>
                     <ul className="footer-weblogos">

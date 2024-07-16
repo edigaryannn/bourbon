@@ -78,13 +78,6 @@ export default function Brands() {
             {/* Second brand section */}
             <div className="brand-cont smooth-scroll-element">
                 <div className="brand-div-2">
-                    <style>
-                        {`
-                        .brand-div-2::before {
-                            background-image: url(${brandData.image1});
-                        }
-                        `}
-                    </style>
                 </div>
                 <div className="brand-text-2">
                     <h1 className="brand-h1"><AnimatedText text={brandData.title2} /></h1>
@@ -94,13 +87,6 @@ export default function Brands() {
 
             {/* Third brand section */}
             <div className="brand-div-3 smooth-scroll-element">
-                <style>
-                    {`
-                    .brand-div-3::before {
-                        background-image: url(${brandData.image2});
-                    }
-                    `}
-                </style>
                 <div className="brand-text-3">
                     <h1 className="brand-h1"><AnimatedText text={brandData.title3} /></h1>
                     <article className="brand-desc"><AnimatedText text={brandData.desc3} /> </article>
@@ -118,14 +104,17 @@ export default function Brands() {
             {`
                 .brand-div::before {
                                 background-image: url(${brandData.image1});
+                                opacity: 0.7;
                             }
             
                 .brand-div-2::before {
                                 background-image: url(${brandData.image2});
+                                opacity: 0.7;
                             }
                                 
                 .brand-div-3::before {
                                 background-image: url(${brandData.image3});
+                                opacity: 0.7;
                             }
             `}
         </style>

@@ -4,16 +4,7 @@ const brandArr = async () =>  {
             'id': 1,
             'brand': 'Hennesy',
             'backUrl': 'https://www.hennessy.com/sites/hennessy/files/styles/landscape_2880x1540/public/2022-03/exclusivites_1_vf_landscape.jpg?itok=LfTZ5Fuf',
-            'description': "The Hennessy cognac distillery was founded by Irish Jacobite military officer Richard Hennessy in 1765, who had served in the army of Louis XV. He retired to the Cognac region, and began distilling and exporting brandies, first to Britain and his native Ireland, closely followed by the United States.[8] In 1813 Richard Hennessy's son James Hennessy gave the company its trading name, Jas Hennessy & Co.",
-            'title1': '',
-            'desc1': '',
-            'title2': '',
-            'desc2': '',
-            'title3': '',
-            'desc3': '',
-            'image1': '',
-            'image2': '',
-            'image3': ''
+            'description': "The Hennessy cognac distillery was founded by Irish Jacobite military officer Richard Hennessy in 1765, who had served in the army of Louis XV. He retired to the Cognac region, and began distilling and exporting brandies, first to Britain and his native Ireland, closely followed by the United States.In 1813 Richard Hennessy's son James Hennessy gave the company its trading name, Jas Hennessy & Co.",
         },
         {
             'id': 2,

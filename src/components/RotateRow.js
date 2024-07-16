@@ -13,7 +13,7 @@ export default function RotateRow({ setTransformSize }) {
             <div className="cont">
                 <div className={`cont-row ${activeIndex === 0 ? 'active' : ''}`} onClick={() => handleClick('0', 0)}></div>
                 <div className={`cont-row ${activeIndex === 1 ? 'active' : ''}`} onClick={() => handleClick('-360px', 1)}></div>
-                <div className={`cont-row ${activeIndex === 2 ? 'active' : ''}`} onClick={() => handleClick('-750px', 2)}></div>
+                <div className={`cont-row ${activeIndex === 2 ? 'active' : ''}`} onClick={() => handleClick('-700px', 2)}></div>
             </div>
 
             <style type="text/css">
@@ -32,6 +32,7 @@ export default function RotateRow({ setTransformSize }) {
                     transition: all ease-in-out .4s;
                     margin: 0 10px;
                     box-shadow: #333 0 0 10px;
+                    cursor: pointer;
                 }
                 .active {
                     background-color: #ffffff;

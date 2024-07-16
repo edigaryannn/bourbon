@@ -12,10 +12,10 @@ export default function Profile() {
       <div className="profile-cont">
         <div className="profile-div">
           <div className="profile-main">
-            <div className="main-heading"><h1>Sign in to account</h1></div>
+            <div className="profile-heading"><h1>Sign in to account</h1></div>
             <div className="profile-text">
-              <span onClick={() => handleClick('signIn')}>Sign in</span>
-              <span onClick={() => handleClick('createAccount')}>Create account</span>
+              <span onClick={() => handleClick('signIn')} className={activeForm === 'signIn' ? 'active' : ' '}>Sign in</span>
+              <span onClick={() => handleClick('createAccount')} className={activeForm === 'createAccount' ? 'active' : ' '}>Create account</span>
             </div>
             <div className="profile-form">
               {activeForm === 'signIn' && (
