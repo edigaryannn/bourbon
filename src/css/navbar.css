@@ -1,46 +1,56 @@
-/* Navigation bar style */
+/* Header styles */
 
-.header-nav{
+.header-nav {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 46%;
 }
-.header-logo{
-    width: 8%;
+
+.header-logo {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo-a{
-    height: 60%;
+
+.logo-a {
+    height: 100%;
+    width: 100%;
 }
-.logo{
+
+.logo {
     height: -webkit-fill-available;
 }
-.header-prof{
+
+.header-prof {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     justify-content: space-evenly;
     width: 46%;
 }
-.nav-table{
+
+.nav-table {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     text-transform: uppercase;
 }
-.nav-li{
+
+.nav-li {
     list-style-type: none;
-    padding: 0 20px;
+    position: relative; /* Needed for positioning nav-dropdown */
+    cursor: pointer;
 }
+
 .nav-li-a {
     display: inline-block;
     position: relative; /* Needed for the pseudo-element positioning */
+    cursor: pointer;
 }
-.nav-logo{
+
+.nav-logo {
     height: 2rem;
     width: 2rem;
     margin-right: 120px;
@@ -61,4 +71,52 @@
 
 .nav-li-a:hover::before {
     width: 100%;
+}
+
+/* nav-DropDown styles */
+
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.nav-dropdown-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.drop-ul{
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    margin: 0 10px;
+}
+.drop-ul-a{
+    border-bottom: 1px #000 solid;
+}
+.drop-li{
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.nav-dropdown-menu li {
+    padding: 8px 10px;
+}
+
+.nav-dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-dropdown-menu li a:hover {
+    background-color: #f1f1f1;
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import brandArr from '../data/HomeData'; // Assuming brandArr is imported correctly
 import { PiFacebookLogoBold, PiInstagramLogoBold, PiYoutubeLogoBold, PiXBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
+import bourbon from "../img/bourbon.png";
 
 export default function Footer() {
     const [brands, setBrands] = useState([]);
@@ -19,7 +20,7 @@ export default function Footer() {
             <div className="footer-cont">
                 <div className="footer-logo">
                     <a href="/" className="footer-logo-a">
-                        <img className="footer-logo-img" src="https://www.hennessy.com/themes/custom/hennessy/assets/images/logo-hennessy-white.png" alt="Hennessy Logo" />
+                        <img className="footer-logo-img" src={bourbon} alt="Hennessy Logo" />
                     </a>
                 </div>
                 <div className="footer-div">

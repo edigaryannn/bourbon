@@ -45,7 +45,7 @@ const OrderData = async () => {
         {
             'id': 7,
             'company': 'hennessy',
-            'name': 'Hennessy Classivm',
+            'name': 'Hennessy ClassiVm',
             'imgUrl': "https://www.hennessy.com/sites/hennessy/files/2020-03/VS_CLASIUM.png",
             'description': "Hennessy Classivm combines the strength of eaux-de-vie and a singular spicy taste to form a new style of cognac. Aged for between three and twelve years, the broad spectrum of eaux-de-vie that make up Hennessy Classivm bring a range of contrasting delights to this innovative style, but they ultimately come together in perfect harmony. With vibrant passion, Gen-Z are eager to be independent with no stereotypical rules told by others, and they are undoubtedly the life do-ers for any challenges and hardship.Enjoy it any way you like as this is a cognac to be appreciated on its own, or mixed with a little green tea or a splash of lemon."
         },
