@@ -18,6 +18,7 @@ import '../css/order.css';
 import '../css/brands.css';
 import '../css/profile.css';
 import '../css/single.css';
+import '../css/stylePhone.css';
 
 
 function App() {

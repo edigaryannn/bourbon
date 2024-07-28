@@ -29,6 +29,7 @@ export default function Footer() {
                             <Link to={`brands/${item.id}`} key={index} ><li className="footer-brand">{item.brand}</li></Link>
                         ))}
                     </ul>
+
                     <ul className="footer-weblogos">
                         <li><a href="http://facebook.com" target="blank"><PiFacebookLogoBold className="webLogos" /></a></li>
                         <li><a href="http://instagram.com" target="blank"><PiInstagramLogoBold className="webLogos" /></a></li>

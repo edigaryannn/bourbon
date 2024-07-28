@@ -44,11 +44,11 @@ ul {
     animation: fadeIn 1s forwards;
 }
 
-a,
+
 a:link,
 a:visited {
     text-decoration: none;
-    color: #ffffff;
+    color: unset;
 }
 
 /* General Styles */
@@ -65,16 +65,18 @@ body {
 header {
     background-color: transparent;
     width: 100%;
-    height: 5rem;
-    box-shadow: 0 10px 10px #101010;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .header {
     display: flex;
     justify-content: center;
-    width: 80%;
+    align-items: center;
+    width: 90%;
     z-index: 3;
 }
 
@@ -85,8 +87,10 @@ main {
     background-image: url(https://www.winedeals.com/media/magefan_blog/shutterstock_1364396918.jpg);
     background-size: cover;
     background-color: #101010;
+    background-position: center;
     color: #D3D3D3;
     display: flex;
+    transition: opacity ease .4s;
 }
 
 main::before {
@@ -196,11 +200,16 @@ main::before {
     color: #fff;
     z-index: 3;
     transition: ease-in-out .4s;
+    background: transparent;
 }
 
 .main-div-text p {
     font-size: 18px;
     text-shadow: #000 10px 0px 10px;
+}
+
+.main-div-a-btn{
+    z-index: 4;
 }
 
 .main-div-text h1 {
@@ -384,7 +393,7 @@ footer h1 {
 .footer-div {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
     min-height: 220px;
 }
@@ -392,7 +401,6 @@ footer h1 {
 .footer-brands {
     position: relative;
     height: 100%;
-    width: 10%;
     text-align: start;
 }
 .footer-brand{
@@ -400,20 +408,6 @@ footer h1 {
     position: relative;
     transition: opacity ease-in-out .3s;
 }
-.footer-weblogos {
-    width: 10%;
-}
-
-.footer-brands::before {
-    content: '';
-    height: 100%;
-    width: 2px;
-    background-color: #D3D3D3;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
 .webLogos {
     height: 25px;
     width: 25px;

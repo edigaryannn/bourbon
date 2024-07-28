@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    
+    z-index: 3;
 }
 .profile-main .main-heading{
     color: #333;
@@ -46,7 +46,6 @@
     color: #000;
 }
 .profile-form{
-    min-height: 800px;
     display: flex;
     width: 100%;
 }

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import '../css/main.css'; // Make sure to import your CSS file
 
-const AnimatedText = ({ text }) => {
+const AnimatedText = ({ text, type='paragraph', maxLength }) => {
     const textRef = useRef(null);
 
     useEffect(() => {
@@ -28,9 +28,18 @@ const AnimatedText = ({ text }) => {
         };
     }, []);
 
+    const truncateText = (text, maxLength=200) => {
+        if (text.length > maxLength) {
+            return text.substring(0, maxLength) + '...';
+        }
+        return text;
+    };
+
+    const truncatedText = maxLength ? truncateText(text, maxLength) : text;
+
     return (
         <div className="animate-text" ref={textRef}>
-            {text}
+            {type === 'header' ? <h1>{truncatedText}</h1> : <p>{truncatedText}</p>}
         </div>
     );
 };

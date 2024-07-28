@@ -11,7 +11,7 @@ const OrderData = async () => {
             'id': 2,
             'company': 'jack daniels',
             'name': 'Jack Daniels Honey',
-            'imgUrl': "https://telebotella.es/wp-content/uploads/2015/04/jackdanielshoney.webp",
+            'imgUrl': "https://www.totalwine.com/dynamic/x1000,sq/media/sys_master/twmmedia/h67/hc7/11770058670110.png",
             'description': "A blend of Jack Daniel’s Tennessee Whiskey and a unique honey liqueur of our own making, for a taste that’s one-of-a-kind and unmistakably Jack. With hints of honey and a finish that’s naturally smooth, Jack Daniel’s Tennessee Honey offers a taste of the unexpected."
         },
         {

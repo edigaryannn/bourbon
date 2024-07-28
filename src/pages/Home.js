@@ -14,26 +14,7 @@ const groupByBrand = (brands) => {
     }, {});
 }
 
-
 export default function Home() {
-
-    // smooth scrolling effect function
-// const [scrollPosition, setScrollPosition] = useState(0);
-// const [scrollPositionY, setScrollPositionY] = useState(0);
-
-// useEffect(() => {
-    
-    
-//     const onScroll = () => {
-//         setScrollPosition(scrollSize);
-//     };
-
-//     window.addEventListener('scroll', onScroll);
-//     let scrollSize = window.scrollY - 50;
-// }, []);
-
-// console.log(window.scrollY);
-
     useScrollToTop();
 
     const [brands, setBrands] = useState([]);
@@ -54,49 +35,23 @@ export default function Home() {
                 </div>
                 {Object.keys(brands).map((brand) => (
                     brands[brand].map((item, index) => (
-                        <div 
-                            key={index} 
-                            className="main-div" 
+                        <div
+                            key={index}
+                            className="main-div"
                             style={{ backgroundImage: `url(${item.backUrl})` }}
                         >
-                            <Link to={`/brands/${item.id}`}>
+                            <Link to={`/brands/${item.id}`} className="main-div-a-btn">
                                 <button className="main-div-but">
                                     Watch Brand
                                 </button>
                             </Link>
                             <div className="main-div-text">
-                                <h1><AnimatedText text={item.brand} /></h1>
-                                <p><AnimatedText text={item.description} /></p>
+                                <AnimatedText text={item.brand} type='header' />
+                                <AnimatedText text={item.description} maxLength={200} />
                             </div>
                         </div>
                     ))
                 ))}
-
-                {/* <div className="main-heading">
-                    <h1>Other Drinks.</h1>
-                </div>
-                <div className="nonalc-cont">
-                    <div className="nonalc-div">
-                        <div className="nonalc-img">
-                            <img 
-                                src="https://www.saq.com/media/catalog/product/1/5/15298137-1_1707929287.png?optimize=high&fit=bounds&height=&width=&format=jpeg" 
-                                alt="Coca x Jack" 
-                            />
-                        </div>
-                        <h2>Coca x Jack</h2>
-                        <a href="/"><span>More</span></a>
-                    </div>
-                    <div className="nonalc-div">
-                        <div className="nonalc-img">
-                            <img 
-                                src="https://spb.luding.ru/upload/resize_cache/iblock/ef8/800_900_0/d3py2o6s2dqh2vd9ur5tww5uuh6s1c81.png" 
-                                alt="Pepsi Max" 
-                            />
-                        </div>
-                        <h2>Pepsi Max</h2>
-                        <a href="/"><span>More</span></a>
-                    </div>
-                </div> */}
             </div>
         </main>
     );

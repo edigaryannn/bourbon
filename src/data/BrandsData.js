@@ -22,7 +22,7 @@ const brandsData = async () =>  {
             'desc2': "On a state level, Tennessee has imposed stringent requirements. To be labeled as Tennessee whiskey, it is not enough under state law that the whiskey be produced in Tennessee; it must meet quality and production standards. These are the same standards used by Jack Daniel's Distillery, and some other distillers are displeased with the requirements being enshrined into law.",
             'title3': "DISTILLERY",
             'desc3': "The Jack Daniel Distillery in Lynchburg is situated in and around a hollow known as 'Stillhouse Hollow' or 'Jack Daniel's Hollow', where a spring flows from a cave at the base of a limestone cliff. The limestone removes iron from the water, making it ideal for distilling whiskey (water heavy in iron gives whiskey a bad taste).The spring feeds into nearby East Fork Mulberry Creek, which is part of the Elk River watershed. Some 1.9 million barrels containing the aging whiskey are stored in several dozen barrelhouses, some of which adorn the adjacent hilltops and are visible throughout Lynchburg.",
-            'image1': "https://americanwhiskeytrail.distilledspirits.org/sites/default/files/styles/flexslider_full/public/distillery/field_slides/Jack%20Daniels%20Visitor%27s%20Center_opt.jpg?itok=vpZAEgVu",
+            'image1': "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/71/9b/66/visitor-center.jpg?w=1100&h=800&s=1",
             'image2': "https://i0.wp.com/highestspirits.com/wp-content/uploads/2020/07/jd2.jpg?fit=2000%2C1334&ssl=1",
             'image3': "//res.cloudinary.com/hjqklbxsu/image/upload/f_auto,fl_lossy,q_auto/v1671014449/side/d/JD%20HOMEPLACE%20DSKTP.png"
         },

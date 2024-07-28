@@ -4,23 +4,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 46%;
+    width: 50%;
 }
 
 .header-logo {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 5rem;
 }
 
 .logo-a {
     height: 100%;
-    width: 100%;
 }
 
 .logo {
-    height: -webkit-fill-available;
+    max-height: 5rem;
 }
 
 .header-prof {
@@ -28,7 +27,7 @@
     align-items: center;
     flex-direction: row-reverse;
     justify-content: space-evenly;
-    width: 46%;
+    width: 50%;
 }
 
 .nav-table {
@@ -42,6 +41,8 @@
     list-style-type: none;
     position: relative; /* Needed for positioning nav-dropdown */
     cursor: pointer;
+    margin: 0 10px;
+    white-space: nowrap;
 }
 
 .nav-li-a {
@@ -53,7 +54,6 @@
 .nav-logo {
     height: 2rem;
     width: 2rem;
-    margin-right: 120px;
     cursor: pointer;
 }
 
@@ -82,7 +82,7 @@
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    z-index: 1000;
+    z-index: 4;
 }
 
 .nav-dropdown-menu {
@@ -100,6 +100,7 @@
 }
 .drop-ul-a{
     border-bottom: 1px #000 solid;
+    color: #000;
 }
 .drop-li{
     color: #000;
@@ -119,4 +120,44 @@
 
 .nav-dropdown-menu li a:hover {
     background-color: #f1f1f1;
+}
+.nav-drop{
+    display: none;
+}
+.nav-dropDown {
+    width: 100%;
+    background-color: #000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    bottom: -100%;
+    top: 100%;
+    opacity: 0;
+    height: fit-content;
+    overflow: hidden;
+    height: 0;
+}
+
+.nav-dropDown.navActive {
+    opacity: 1;
+    z-index: 4;
+    height: fit-content;
+}
+
+.nav-dropUl{
+    margin: 0 20px;
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+.nav-dropUl li{
+    padding: 10px;
+    border-bottom: #fff solid 1px;
 }

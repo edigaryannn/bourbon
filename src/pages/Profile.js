@@ -8,7 +8,7 @@ export default function Profile() {
   };
 
   return (
-    <>
+    <main>
       <div className="profile-cont">
         <div className="profile-div">
           <div className="profile-main">
@@ -36,7 +36,6 @@ export default function Profile() {
                   <input type="text" placeholder="Username" required />
                   <input type="password" placeholder="Password" required />
                   <input type="password" placeholder="Confirm password" required />
-                  <textarea placeholder="Enter the message:" required></textarea>
                   <button className="form-btn">
                     Create Account
                   </button>
@@ -46,6 +45,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }

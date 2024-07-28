@@ -27,7 +27,7 @@ const DropDown = () => {
         <div className="nav-dropdown">
             <div className="nav-dropdown-menu">
                 {brands.map((item, index) => (
-                    <li className='drop-ul' key={index}>
+                    <ul className='drop-ul' key={index}>
                         
                         <Link to={`/brands/${item.id}`} className='drop-ul-a'>{item.brand}</Link>
                         
@@ -40,7 +40,7 @@ const DropDown = () => {
                                 ))}
                        
 
-                    </li>
+                    </ul>
                 ))}
 
             </div>

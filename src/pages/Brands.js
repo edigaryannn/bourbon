@@ -10,7 +10,6 @@ export default function Brands() {
     const [brand, setBrand] = useState(null); //depends to brandArr
     const [brandData, setBrandData] = useState(null); // depends to brandsData
     const [scrollPosition, setScrollPosition] = useState(0);
-    console.log(scrollPosition);
 
     useEffect(() => {
         const fetchBrand = async () => {
@@ -33,7 +32,6 @@ export default function Brands() {
                 
                 const selectedBrandData = data.find(brandData => brandData.id === parseInt(id));
                 setBrandData(selectedBrandData);
-                console.log(selectedBrandData);
             } catch (error) {
                 console.error("Error fetching brand data:", error);
                 // Handle error state if needed
@@ -70,8 +68,8 @@ export default function Brands() {
             {/* First brand section */}
             <div className="brand-div smooth-scroll-element">
                 <div className="brand-text">
-                    <h1 className="brand-h1"><AnimatedText text={brandData.title1} /></h1>
-                    <article className="brand-desc"><AnimatedText text={brandData.desc1} /> </article>
+                    <h1 className="brand-h1"><AnimatedText text={brandData.title1} type="header"  /></h1>
+                    <article className="brand-desc"><AnimatedText text={brandData.desc1}  /> </article>
                 </div>
             </div>
 
@@ -80,19 +78,19 @@ export default function Brands() {
                 <div className="brand-div-2">
                 </div>
                 <div className="brand-text-2">
-                    <h1 className="brand-h1"><AnimatedText text={brandData.title2} /></h1>
-                    <article className="brand-desc"><AnimatedText text={brandData.desc2} /> </article>
+                    <h1 className="brand-h1"><AnimatedText text={brandData.title2} type="header"  /></h1>
+                    <article className="brand-desc"><AnimatedText text={brandData.desc2}  /> </article>
                 </div>
             </div>
 
             {/* Third brand section */}
             <div className="brand-div-3 smooth-scroll-element">
                 <div className="brand-text-3">
-                    <h1 className="brand-h1"><AnimatedText text={brandData.title3} /></h1>
-                    <article className="brand-desc"><AnimatedText text={brandData.desc3} /> </article>
+                    <h1 className="brand-h1"><AnimatedText text={brandData.title3} type="header"  /></h1>
+                    <article className="brand-desc"><AnimatedText text={brandData.desc3}  /> </article>
                 </div>
-                <Link to={`/order`}>
-                    <button className="main-div-but">
+                <Link to={`/order`} className="brands-btn">
+                    <button className="main-div-but brands-div-btn">
                         Watch Product
                     </button>
                 </Link>
