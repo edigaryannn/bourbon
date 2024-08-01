@@ -1,0 +1,477 @@
+*,
+::before,
+::after,html {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#root{
+    position: relative;
+    min-height: 100vh;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+}
+/* Define the keyframes for the animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+}
+
+
+/* this effects to smooth scrolling */
+
+.smooth-scroll-element {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+/* Define the animation for the element */
+.animate-text {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate-text.visible {
+    animation: fadeIn 1s forwards;
+}
+
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+/* General Styles */
+
+body {
+    background-color: #000000;
+    color: #F5F5F5;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Headers */
+header {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    z-index: 3;
+}
+
+/* Main Content */
+main {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(https://www.winedeals.com/media/magefan_blog/shutterstock_1364396918.jpg);
+    background-size: cover;
+    background-color: #101010;
+    background-position: center;
+    color: #D3D3D3;
+    display: flex;
+    transition: opacity ease .4s;
+    min-height: 100vh;
+}
+
+main::before {
+    content: ' ';
+    height: -webkit-fill-available;
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: inset black 10px 20px 70px;
+}
+
+.main-heading {
+    margin-top: 50px;
+}
+
+.main-heading h1 {
+    font-size: 48px;
+}
+
+.main-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.main-div {
+    display: inline-block;
+    width: 85%;
+    height: 40rem;
+    margin: 42px 0;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: inset 10px 10px 50px #000000, 10px 20px 70px #000000;
+    cursor: pointer;
+    /* background-image: url(https://www.hennessy.com/sites/hennessy/files/styles/landscape_2880x1540/public/2022-03/exclusivites_1_vf_landscape.jpg?itok=LfTZ5Fuf) */
+}
+
+.main-div::before {
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: ease-in-out .4s;
+    border-radius: 5px;
+}
+
+.main-div:hover::before {
+    opacity: 0.4;
+    transition: ease-in-out .4s;
+}
+
+.main-div:hover>.main-div-text {
+    margin: 0 0 50px 50px;
+}
+
+.main-div-but {
+    background: transparent;
+    border: white 3px solid;
+    width: 16rem;
+    height: 4rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0 50px 50px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Merriweather";
+    transition: ease-in-out .3s;
+    cursor: pointer;
+    color: #fff;
+    z-index: 3;
+}
+
+.main-div-but:hover {
+    background-color: #fff;
+    color: #000;
+
+}
+
+.main-div-img {
+    position: absolute;
+    bottom: -30px;
+    left: -50px;
+    transform: rotate(45deg) scale(1.5);
+}
+
+.main-div-text {
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 40px 50px;
+    color: #fff;
+    z-index: 3;
+    transition: ease-in-out .4s;
+    background: transparent;
+}
+
+.main-div-text p {
+    font-size: 18px;
+    text-shadow: #000 10px 0px 10px;
+}
+
+.main-div-a-btn{
+    z-index: 4;
+}
+
+.main-div-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.nonalc-cont {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nonalc-div {
+    width: 20%;
+    height: 48rem;
+    background-color: #fff;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nonalc-img {
+    width: 100%;
+    padding-top: 50px;
+    min-height: 570px;
+    text-align: center;
+}
+
+.nonalc-div img {
+    height: 570px;
+}
+
+.nonalc-div h2 {
+    color: #101010;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.nonalc-div a:hover {
+    text-decoration: underline;
+    color: #000;
+
+}
+
+.nonalc-div a {
+    margin-top: 20px;
+}
+
+.nonalc-div span {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: Roboto;
+}
+
+
+/* contacts */
+
+.contacts-div {
+    width: 70%;
+    background-color: #fff;
+    margin: 50px 0 50px 0;
+    padding: 100px 0;
+    text-align: center;
+    color: #000;
+}
+
+.contacts-div h2 {
+    margin-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 720px;
+    height: 50px;
+    margin: 20px 0;
+    padding: 10px;
+    border: #000 1px solid;
+}
+
+.form input:focus-visible,
+.form select:focus-visible,
+.form textarea:focus-visible {
+    outline: none;
+}
+
+.form-select {
+    border-radius: 0;
+}
+
+.form-select option {
+    height: 50px;
+}
+
+.form-select:focus {
+    box-shadow: none;
+    border: #000 1px solid;
+}
+
+.form textarea {
+    height: 100px;
+}
+
+.form-btn {
+    margin: 20px 0;
+    height: 50px;
+    width: 150px;
+    background: none;
+    border: #000 1px solid;
+    color: #000;
+    transition: all ease 0.4s;
+}
+
+.form-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.contacts-div span {
+    color: #333333;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+
+/* Footer */
+footer {
+    display: grid;
+}
+.footer-cont p{
+    margin: 20px 0;
+}
+
+.footer-cont {
+    background-color: #333333;
+    color: #F5F5F5;
+    text-align: center;
+    z-index: 2;
+}
+
+.footer-logo {
+    padding: 20px 0;
+    position: relative;
+}
+
+.footer-logo::after,
+.footer-div::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #D3D3D3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-logo-a {
+    height: 100%;
+}
+
+.footer-logo-img {
+    height: 7rem;
+}
+
+footer h1 {
+    padding: 20px 0;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.footer-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    min-height: 220px;
+}
+
+.footer-brands {
+    position: relative;
+    height: 100%;
+    text-align: start;
+}
+.footer-brand{
+    margin: 10px;
+    position: relative;
+    transition: opacity ease-in-out .3s;
+}
+.webLogos {
+    height: 25px;
+    width: 25px;
+    margin: 10px 0;
+    transition: opacity ease-in-out .3s;
+}
+.webLogos:hover, .footer-brand:hover{
+    opacity: 0.5;
+}
+
+
+
+/* error page */
+.error-cont{
+    width: 100%;
+    height: -webkit-fill-available;
+    color: #fff;
+    text-align: center;
+    z-index: 4;
+    margin: auto;
+}
+.error-tohome,.error-tohome:visited,.error-tohome:link{
+    text-decoration: underline;
+}
+
+/* loading img div */
+.load{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    z-index: 4;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+
+
+/* favorites */
+.favorites-cont{
+    width: 100%;
+    z-index: 4;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+}
+.colums-row-div.fav-div{
+    justify-content: center;
+    flex-wrap: wrap;
+}

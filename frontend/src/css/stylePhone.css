@@ -1,0 +1,138 @@
+@media (max-width: 1024px) {
+    .contacts-div{
+        width: 100%;
+    }
+    .profile-main{
+        width: 100%;
+    }
+
+    .colums-row{
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+    .colums-row .cont{
+        display: none;
+    }
+    .single-div{
+        width: 100%;
+    }
+    .single-cont{
+        margin: 0;
+    }
+    .single-good{
+        padding: 50px;
+    }
+
+    .brand-text-2 {
+        width: 100%;
+        margin: 30px;
+        padding: 0 5px;
+        position: absolute;
+        top: 0;
+    }
+    .brand-cont{
+        flex-direction: column;
+    }
+    .brand-div-2{
+        margin: 0;
+    }
+}
+@media (max-width: 768px) {
+    .main-div{
+        width: 95%;
+    }
+    .header-nav, .header-prof{
+        display: none;
+    }
+    .nav-drop{
+        display: flex;
+        height: 100%;
+        align-items: center;
+
+    }
+    .nav-drop-icon{
+        height: 4rem;
+        width: 2rem;
+    }
+    .header-logo{
+        text-align: center;
+    }
+    .row-div{
+        min-width: 700px;
+    }
+    .nav-dropDown{
+        display: flex;
+    }
+    .brand-text-3{
+        width: 60%;
+    }
+    .form input, .form select, .form textarea {
+        width: 95%;
+    }
+}
+@media (max-width: 500px){
+    .main-div{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .main-div-but, .main-div-text{
+        position: static;
+        margin: 10px 0;
+    }
+    .main-div-text{
+        text-align: center;
+        width: 90%;
+    }
+    .main-div:hover>.main-div-text {
+        margin: 0;
+        margin-bottom:30px;
+    }
+    
+    .contacts-div{
+        padding: 100px 10px;
+    }
+    .profile-div{
+        padding: 100px 10px;
+    }
+    .brand-div{
+        height: 35rem;
+    }
+    
+    .footer-logo-img{
+        max-width: 300px;
+        height: auto;
+    }
+   
+    .brand-text-3 {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .row-div {
+        max-width: 350px;
+        min-width: 100px;
+    }
+
+    .single-good{
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .single-order{
+        margin: 70px 0;
+    }
+    .single-div{
+        max-width: none;
+    }
+    .single-img img {
+        max-height: 400px;
+    }
+    .single-text{
+        width: 95%;
+    }
+    .brands-div-btn{
+        margin-top: 250%;
+    }
+}
